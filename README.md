@@ -4,8 +4,7 @@ layout: null
 
 # Session tunes
 
-A collection of tunes for the Wellington Irish session.
-
+A collection of tunes played in New Zealand Irish sessions.
 ## A static website
 
 This is a static website that use Jekyll to process files and generate the
