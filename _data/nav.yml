@@ -1,0 +1,23 @@
+- title: 'Home'
+  href: '/'
+
+- title: 'Tunes Archive'
+  href: '/tunes_archive/'
+
+- title: 'Other Sources'
+  href: '/other_sources/'
+
+- title: 'Learn by Ear'
+  href: '/learn_by_ear/'
+
+- title: 'Sets'
+  href: '/build_a_set/'
+
+- title: "Wellington Slow Session"
+  href: "/slowsession/"
+
+- title: "Wellington Regular Session"
+  href: "/regularsession/"
+
+- title: 'Toolbox'
+  href: '/toolbox/'

@@ -1,0 +1,61 @@
+<!-- The Modal -->
+
+<div id="setModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <!-- *** Player controls *** -->
+        <!-- Show a header for where the dots will appear -->
+        <div id="paperHeader">
+            <h2>Choose some tunes first!!</h2>
+        </div>
+        <!-- Draw the dots -->
+        <div class="output" id='output'>
+            <div id="abcPaper" class="abcPaper"></div>
+            <div id="abcAudio"></div>
+        </div>
+
+        <!-- Allow the user to save the notation and/or the ABC-->
+        <div class="formParent">
+            <div class="formChild">
+                <span title="Download the Music Notation">
+                    <input value='Download Music Notation' type='button' class="filterButton" onclick='wssTools.downloadFile("export-set.html", document.getElementById("abcPaper").innerHTML)' />
+                </span>
+            </div>
+            <div class="formChild">
+                <span title="Download the ABC file details. Don't lose your work!">
+                    <input value='Download ABC' type='button' class="filterButton" onclick='wssTools.downloadABCFile(document.getElementById("textAreaABC").value)' />
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Get the modal
+    let setModal = document.getElementById("setModal");
+
+    function viewModal() {
+        buildSetGrid.loadTextarea();
+        setModal.style.display = "inline";
+    }
+
+    // Get the <span> element that closes the setModal
+    let span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the setModal
+    span.onclick = function () {
+        audioPlayer.stopMP3player();
+        audioPlayer.stopABCplayer();
+        setModal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the setModal, close it
+    window.onclick = function (event) {
+        if (event.target == setModal) {
+            audioPlayer.stopMP3player();
+            audioPlayer.stopABCplayer();
+            setModal.style.display = "none";
+        }
+    }
+</script>

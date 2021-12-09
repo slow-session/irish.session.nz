@@ -1,0 +1,20 @@
+<!-- START of search code included from tunes-search.html -->
+
+<div class="searchParentOuter">
+    <input type="search" id="searchBox" name="searchBox" placeholder='Search {{ include.searchTerms }}' value=''>
+    <div class="searchParentInner">
+        <div class="searchChildInner">
+            <input class="filterButton" id="submitSearch" type="submit" name="submit" value="Search" onclick="buildSetGrid.formSearch('{{ include.tuneBook }}', searchBox.value, window.{{ include.store }})">
+        </div>
+        <div class="searchChildInner">
+            <span title="Reset to default">  
+                <input class="filterButton" id="formReset" type="button" name="reset" value="Reset Search" onclick="buildSetGrid.formReset('{{ include.tuneBook }}', 'searchBox', window.{{ include.store }})">
+            </span>
+        </div>
+    </div>
+</div>     
+
+<script>
+    wssTools.enterSearch('searchBox', 'submitSearch');
+</script>
+<!-- END of search code included from tunes-search.html -->

@@ -1,0 +1,61 @@
+---
+layout: page-js
+---
+<div>
+    Added <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+    {% if page.notes %}
+    <p>Notes: {{ page.notes }}</p>
+    {% endif %}
+</div>
+<br />
+
+{% include audioPlayerControls.html %}
+
+<!-- attribution -->
+<div>
+    <br />
+    {% if page.mp3_file %}
+    <p>The audio for {{ page.title }} is sourced from
+        {% if page.mp3_url %}
+        <a href="{{ page.mp3_url }}">{{ page.mp3_source }}</a>.
+        {% else %}
+        {{ page.mp3_source }}.
+        {% endif %}
+        Permission to use is gratefully acknowledged and the audio is made available under this licence:
+        {{ page.mp3_licence }}</p>
+
+    {% if page.mp3_url %}
+    <p>Original audio: <a href="{{ page.mp3_url }}">{{ page.mp3_url }}</a></p>
+    <!-- If the mp3_url is one from YouTube or Facebook etc, embed a copy here -->
+    <div id="mp3Video"></div>
+    <script>
+    let mp3Video = document.getElementById('mp3Video');
+    mp3Video.innerHTML = wssTools.show_iframe("{{ page.mp3_url }}");
+    </script>
+    {% endif %}
+    {% endif %}
+</div>
+
+{% assign tuneID = 1 %}
+<script>
+    window.store = {
+        "{{ tuneID }}": {
+            "title": "{{ page.title | xml_escape }}",
+            "tuneID": "{{ tuneID }}",
+            "key": "{{ page.key | xml_escape }}",
+            "rhythm": "{{ page.rhythm | xml_escape }}",
+            "url": "{{ page.url | xml_escape }}",
+            "mp3": "{{ site.mp3_host | append: page.mp3_file | xml_escape }}",
+            "mp3_source": "{{ page.mp3_source | strip_html | xml_escape }}",
+            "repeats": "{{ page.repeats }}",
+            "parts": "{{ page.parts }}",
+            "abc": {{ page.abc | jsonify }}
+        },
+    };
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        let tuneID = "{{ tuneID }}";
+
+        audioPlayer.selectTune(window.store, tuneID);
+    });
+</script>

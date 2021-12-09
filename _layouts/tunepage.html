@@ -1,0 +1,142 @@
+---
+layout: page-js
+---
+<!-- show tune info -->
+<div class="tuneInfoRow">
+    <div class="tuneInfoColumn">
+        <p class="tuneInfoPara">{{ page.key }} {{ page.rhythm }}, added
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time></p>
+        {% if page.location %}
+        <p class="tuneInfoPara">Played in: {{ page.location }}</p>
+        {% endif %}
+        {% if page.notes %}
+        <p class="tuneInfoPara">Notes: {{ page.notes }}</p>
+        {% endif %}
+    </div>
+    <div class="tuneInfoColumn">
+        {% if page.slowtuneoftheweek %}
+        <p class="tuneInfoPara">Slow Session:
+        <time
+            datetime="{{ page.slowtuneoftheweek | date_to_xmlschema }}">{{ page.slowtuneoftheweek | date: "%-d %B %Y" }}</time>
+        </p>
+        {% elsif page.tags contains 'slowsession' %}
+        <p class="tuneInfoPara">
+        Slow Session: before 2017
+        </p>
+        {% endif %}
+        {% if page.regtuneoftheweek %}
+        <p class="tuneInfoPara">Regular Session:
+        <time
+            datetime="{{ page.regtuneoftheweek | date_to_xmlschema }}">{{ page.regtuneoftheweek | date: "%-d %B %Y" }}</time>
+        </p>
+        {% endif %}
+    </div>
+</div>
+<br />
+
+{% include audioPlayerControls.html %}
+
+<!-- *** preset loops if needed *** -->
+<div id="presetLoops"></div>
+
+<!-- if there's ABC for the tune, display the dots, an ABC player and an ABC editor -->
+<div>
+    {% if page.abc contains "K:" %}
+    <!-- display the dots -->
+    <div id="abcPaper" class="abcPaper"></div>
+    <div id="abcAudio"></div>
+
+    <span title="Download the Music Notation">
+        <input value='Download Music Notation' type='button' class="filterButton" onclick='wssTools.downloadFile(wssTools.slugify("{{ page.title | smartify }}") + ".html", document.getElementById("abcPaper").innerHTML)' />
+    </span>
+    
+    <!-- show/edit the ABC -->
+    <details>
+        <summary class="filterButton">ABC Source</summary>
+        <div id='abcSource'>
+            <p>You can edit the ABC source, and see your changes. This will <b>NOT</b> change the website directly. A brief
+            set of instructions is found <a href="/editingABC/">here.</a>
+            </p>
+
+            <textarea id="textAreaABC" class="abcText" rows="14" spellcheck="false"></textarea>
+            <!-- show ABC errors -->
+            <div class="showTextInfo"><strong>ABC Status: </strong><span id='abcWarnings'></span></div>
+            <div title="Download the ABC you've entered. Don't lose your work!">
+                <input value='Download ABC' type='button' class="filterButton"
+                onclick='wssTools.downloadABCFile(document.getElementById("textAreaABC").value)' />
+            </div>
+
+            <p>If you feel that your changes are a closer match to the recording on the website, please save your changes (<b>Download ABC</b> button), send them to us at <a href="mailto:{{ site.email }}">{{ site.email }}</a>, and
+            we will review the proposed changes.
+            </p>
+        </div>
+    </details>
+    {% endif %}
+
+    <!-- attribution -->
+    <div>
+        {% if page.mp3_file %}
+        <p>The audio for {{ page.title }} is sourced from
+            {% if page.mp3_url %}
+            <a href="{{ page.mp3_url }}">{{ page.mp3_source }}</a>.
+            {% else %}
+            {{ page.mp3_source }}.
+            {% endif %}
+            Permission to use is gratefully acknowledged and the audio is made available under this licence:
+            {{ page.mp3_licence }}</p>
+
+        {% if page.mp3_url %}
+        <p>Original audio: <a href="{{ page.mp3_url }}">{{ page.mp3_url }}</a></p>
+        <!-- If the mp3_url is one from YouTube or Facebook, embed a copy here -->
+        <div id="mp3Video"></div>
+        <script>
+        let mp3Video = document.getElementById('mp3Video');
+        mp3Video.innerHTML = wssTools.show_iframe("{{ page.mp3_url }}");
+        </script>
+        {% endif %}
+        {% endif %}
+
+        {% if page.alt_mp3_url %}
+        <p>Alternative version: <a href="{{ page.alt_mp3_url }}">{{ page.alt_mp3_url }}</a></p>
+        <!-- If the mp3_url is one from YouTube or Facebook, embed a copy here -->
+        <div id="altMP3Video"></div>
+        <script>
+        let altMP3Video = document.getElementById('altMP3Video');
+        altMP3Video.innerHTML = wssTools.show_iframe("{{ page.alt_mp3_url }}");
+        </script>
+        {% endif %}
+
+        {% if page.abc_source %}
+        <p>The music notation was derived from
+            {% if page.abc_url %}
+            <a href="{{ page.abc_url }}">{{ page.abc_source }}</a>.</p>
+        {% else %}
+        {{ page.abc_source }}
+        {% endif %}
+        {% endif %}
+    </div>
+</div>
+
+{% assign tuneID = 1 %}
+<script>
+    window.store = {
+        "{{ tuneID }}": {
+            "title": "{{ page.title | xml_escape }}",
+            "tuneID": "{{ tuneID }}",
+            "key": "{{ page.key | xml_escape }}",
+            "rhythm": "{{ page.rhythm | xml_escape }}",
+            "url": "{{ page.url | xml_escape }}",
+            "mp3": "{{ site.mp3_host | append: page.mp3_file | xml_escape }}",
+            "mp3_source": "{{ page.mp3_source | strip_html | xml_escape }}",
+            "repeats": "{{ page.repeats }}",
+            "parts": "{{ page.parts }}",
+            "abc": {{ page.abc | jsonify }}
+        },
+    };
+
+
+    document.addEventListener("DOMContentLoaded", function (event) {
+        let tuneID = "1";
+        audioPlayer.selectTune(window.store, tuneID);
+    });
+</script>

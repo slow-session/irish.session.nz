@@ -1,0 +1,7 @@
+#
+# Use the mp3 and tunebook files on the production site
+# This means you can't easily test a new mp3 file locally
+# Use https://irish.session.nz/playLocalAudio/ instead
+#
+mp3_host: https://irish.session.nz
+tunebooks_host: https://irish.session.nz

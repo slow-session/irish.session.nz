@@ -1,0 +1,49 @@
+---
+layout: page-js
+---
+<div id="tunelist"></div>
+Type: {{ page.rhythm }}, added
+<time datetime="{{ page.date | date_to_xmlschema }}" setTuneprop="datePublished">{{ page.date | date: "%-d %B %Y" }}</time>
+<br />Played in: {{ page.location }}
+{% if page.notes %}
+<p>Notes: {{ page.notes }}</p>
+{% endif %}
+<br />
+
+<!-- Area to store ABC -->
+<textarea id="textAreaABC" class="abcSource">
+X: 1
+</textarea>
+
+<div id="abcPaper" class="abcPaper"></div>
+<div id="abcAudio"></div>
+
+<span title="Download the Music Notation">
+    <input value='Download Music Notation' type='button' class="filterButton" onclick='wssTools.downloadFile(wssTools.slugify("{{ page.title | smartify }}") + ".html", document.getElementById("abcPaper").innerHTML)' />
+</span>
+
+<script>
+var abcSource = '';
+var regex = new RegExp('X:.*\n');
+var textAreaABC = document.getElementById('textAreaABC');
+</script>
+
+{% assign tuneId = 1 %}
+{% for setTune in page.tunes %}
+{% assign siteTunes = site.tunes | where: 'titleID', setTune %}
+{% for tune in siteTunes %}
+<script>
+abcSource = {{ tune.abc | jsonify }};
+abcSource = abcSource.replace(regex, '');
+textAreaABC.innerHTML += abcSource;
+</script>
+{% assign tuneId = tuneId | plus: 1 %}
+{% endfor %}
+{% endfor %}
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function (event) {
+    audioPlayer.displayABC(textAreaABC.value);
+});
+</script>

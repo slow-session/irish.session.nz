@@ -1,0 +1,122 @@
+# Site settings
+name: New Zealand Irish Sessions
+email: archive@lpnz.org
+author: archive@lpnz.org
+keywords: irish, traditional, music, jigs, reels, polkas, craic, Wellington
+description: Irish trad tune archive
+
+# Parameters embedded in site
+slowsession_time: '7:30 to 8:30'
+#slowsession_time: "Please check back when the world is normal!"
+session_time: '8:45 to late'
+#session_time: "Please check back when the world is normal!"
+
+# no of tunes to show in latest.md etc
+latest_tunes_max: 20
+slow_tunes_max: 100
+reg_tunes_max: 20
+
+header: yes
+header_image: images/banner.jpg
+
+#
+# used for split site working like the DEV site
+#
+# NOTE: leave these blank for the production site 
+# Also overriden by the _config_localhost.yml when testing locally
+#
+http_host: 
+mp3_host: 
+tunebooks_host: 
+js_host: 
+
+# Exclude our ruby stuff and other dirs
+exclude:
+    [
+        .bundle,
+        bin,
+        vendor,
+        Gemfile,
+        Gemfile.lock,
+        Rakefile,
+        s3_website.yml,
+        .last_optimized,
+        _scripts,
+        documentation,
+        archive,
+        mp3,
+        tunebooks,
+    ]
+
+# Build settings
+markdown: kramdown
+kramdown:
+    input: GFM
+
+destination: _site
+
+# Compress our Css
+sass:
+    style: :compressed
+
+# Needed?
+permalink: /blog/:year/:title
+
+#### SEO Stuff
+
+# Facebook Opengraph
+facebook_user: WellingtonSession
+# default FB id
+facebook_app_id: 966242223397117
+facebook_locale: en_US
+facebook_page: https://www.facebook.com/groups/WellingtonSession/
+facebook_image: /images/pubscene-small.jpg
+
+# Needed?
+# Twitter Cards
+twitter_user:
+twitter_card: fals
+twitter_image: #enter a default image (at least 200x200px) to use here for posts/pages that don't have one.
+
+collections:
+    tunes:
+        output: true
+
+    northernfiddler:
+        output: true
+
+    obrientunes:
+        output: true
+
+    pottstunes:
+        output: true
+
+    sets:
+        output: true
+
+defaults:
+    - scope:
+          path: '_tunes'
+      values:
+          layout: 'tunepage'
+          permalink: /tunes/:title:output_ext
+    - scope:
+          path: '_northernfiddler'
+      values:
+          layout: 'tunepage-northernfiddler'
+          permalink: /northernfiddler/:title:output_ext
+    - scope:
+          path: '_obrientunes'
+      values:
+          layout: 'tunepage-obrien'
+          permalink: /obrientunes/:title:output_ext
+    - scope:
+          path: '_pottstunes'
+      values:
+          layout: 'tunepage-potts'
+          permalink: /pottstunes/:title:output_ext
+    - scope:
+          path: '_sets'
+      values:
+          layout: 'setpage'
+          permalink: /sets/:title:output_ext

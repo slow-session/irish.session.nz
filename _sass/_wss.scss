@@ -1,0 +1,637 @@
+// Pad the header image in from the sides
+.header-image {
+    padding-left: $spacing-unit;
+    padding-right: $spacing-unit;
+    width: 100%;
+}
+
+.tuneInfoRow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tuneInfoColumn {
+    flex: 1;
+    min-width: fit-content;
+}
+
+p.tuneInfoPara {
+    margin: 0;
+}
+
+// START: controls for audio player
+.audioParentOuter {
+    display: grid;
+    grid-template-columns: 2.8rem 1fr;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: $brand-color;
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.audioParentInner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.audioChildInner {
+    flex: 1;
+    padding-left: 0.5rem;
+    padding-right: 1rem;
+    padding-top: 1.5rem;
+}
+
+.mp3LoopControl {
+    display: flex;
+    margin-top: 2rem;
+    min-width: 10rem;
+    justify-content: space-around;
+}
+
+.playButton {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-top: 0.7rem;
+}
+
+.playIcon {
+    background-image: url("/images/play-button.svg") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+}
+
+.pauseIcon {
+    background-image: url("/images/pause-button.svg") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+}
+
+p.speedLabel {
+    margin-top: 2.5rem;
+    margin-bottom: 0;
+    clear: left;
+    font-size: small;
+    text-align: center;
+}
+
+.abcSource {
+    display: none;
+}
+
+.abcPaper {
+    display: block;
+}
+
+.abcText {
+    background-color: darken($complimentary-color, 6%);
+    font-size: small;
+    max-width: 100%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+// END: controls for audio and ABC players
+
+.loopButton {
+    background-color: $brand-color;
+    padding: 4px;
+    margin-bottom: 5px;
+    color: $complimentary-color;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    border-style: solid;
+    border-width: 2px;
+    border-color: darken($brand-color, 20%);
+}
+
+.filterButton {
+    background-color: $brand-color;
+    padding: 7px 5px 4px 5px;
+    margin: 5px;
+    color: $complimentary-color;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    border-style: solid;
+    border-width: 2px;
+    border-color: darken($brand-color, 20%);
+}
+
+.filterButton.filterDisabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+details > summary {
+    width: max-content;
+    list-style-type: none;
+    white-space: nowrap
+}
+
+details > summary::marker {
+    display: block;
+}
+
+details summary::before {
+    content: "Show ";
+}
+
+details[open] summary::before {
+    content: "Hide ";
+}
+
+// deprecated in Chrome 89 but needed on Safari
+details > summary::-webkit-details-marker {
+    display: none;
+}
+
+h2 span {
+    display: inline;
+    font-size: 1rem;
+}
+
+fieldset {
+    //float: left;
+    margin: 0 auto 5px auto;
+    text-align: left;
+    border-radius: 8px;
+    border-color: $brand-color;
+    border-style: solid;
+    background-color: darken($complimentary-color, 6%);
+}
+
+.container-covidInfo {
+    display: inline-block;
+    border: 2px solid $brand-color;
+    //background-color: #f7c501;
+    background-image: linear-gradient(135deg, #f7c501 25%, #ffffff 25%, #ffffff 50%, #f7c501 50%, #f7c501 75%, #ffffff 75%, #ffffff 100%);
+    background-size: 56.57px 56.57px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px 10px 0px 10px;
+}
+
+.formParent {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.formChild {
+    flex: 1;
+    padding: 1rem;
+    padding-bottom: 0rem;
+}
+
+// wrap long URLs
+a {
+    word-wrap: break-word;
+}
+
+form {
+    text-align: left;
+}
+
+input,
+select,
+textarea {
+    border-radius: 8px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+input[type="search"] {
+    border: 2px solid $brand-color;
+    background-color: #f0f0f0;
+    padding: inherit;
+}
+
+// Hide Arrows From Input Number
+// Chrome, Safari, Edge, Opera
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// Firefox
+input[type=number] {
+  -moz-appearance: textfield;
+  text-align: left;
+}
+
+// START: used for Preset Loops
+.loop3columnLayout {
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr;
+    border-color: $brand-color;
+    border-style: solid;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+// shading for alternate rows
+.loop3columnLayout > div:nth-child(6n + 4),
+.loop3columnLayout > div:nth-child(6n + 5),
+.loop3columnLayout > div:nth-child(6n + 6) {
+    background-color: darken($complimentary-color, 6%);
+}
+
+.loopLabel {
+    padding: 5px 0 0 5px;
+    text-align: center;
+}
+
+.loopControl {
+    text-align: center;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loopNudgeButton {
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 1.4rem;
+}
+
+.loopDownIcon {
+    background-image: url("/images/down-button.svg") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+}
+
+.loopUpIcon {
+    background-image: url("/images/up-button.svg") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+}
+
+.loopInput {
+    font-size: 0.9rem;
+    border-radius: unset;
+    width: 5ch;
+    height: fit-content;
+}
+// END: used for Preset Loops
+
+.featurePicture {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-right: 1rem;
+    padding: 10px;
+    width: 400px;
+    float: left;
+}
+
+.licenceUsed {
+    overflow-y: scroll;
+    height: 200px;
+    border: 1px solid black;
+    background-color: darken($complimentary-color, 6%);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.hr-with-margins {
+    margin-top: 1rem; 
+    margin-bottom: 1rem;
+}
+
+// START: controls for embedded videos
+.container-iframe {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 75%; /* 4:3 Aspect Ratio (divide 3 by 4 = 0.75) */
+  }
+  
+  /* Then style the iframe to fit in the container div with full height and width */
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+// END: controls for embedded videos
+
+// START: CSS for managing the "tunes" grids that appear on a number of pages
+.gridParent {
+    display: flex;
+    width: 100%;
+    margin: 1em auto 1em;
+}
+
+// if the height is 320px we show ~10 tunes in the table
+.gridChild {
+    display: grid;
+    max-height: 320px;
+    width: 100%;
+    grid-auto-rows: fit-content(1em);
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-color: $brand-color;
+    border-style: solid;
+    border-radius: 8px;
+    padding: 0rem;
+}
+
+// these column layout classes need to be embedded in a "gridChild" class
+.tunes3columnLayout {
+    grid-template-columns: minmax(100px, 360px) 3fr minmax(50px, 120px);
+}
+
+.tunes3columnLayout > span:nth-child(6n + 1),
+.tunes3columnLayout > span:nth-child(6n + 2),
+.tunes3columnLayout > span:nth-child(6n + 3) {
+    background-color: darken($complimentary-color, 6%);
+}
+
+.tunes2columnLayout {
+    //grid-template-columns: 6fr 1fr;
+    grid-template-columns: minmax(200px, 400px) minmax(50px, 200px);
+}
+
+.tunes2columnLayout > span:nth-child(4n + 1),
+.tunes2columnLayout > span:nth-child(4n + 2) {
+    background-color: darken($complimentary-color, 6%);
+}
+
+.tunes1columnLayout {
+    grid-template-columns: minmax(300px, 600px);
+}
+
+.tunes1columnLayout > span:nth-child(2n + 1) {
+    background-color: darken($complimentary-color, 6%);
+}
+
+.tunes3columnLayout > span,
+.tunes2columnLayout > span,
+.tunes1columnLayout > span {
+    display: flex;
+    padding: 4px 2px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    /* style scrollbar for WebKit */
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    /* style scrollbar track for WebKit */
+    background: $complimentary-color;
+}
+
+::-webkit-scrollbar-thumb {
+    /* style scrollbar thumb for WebKit */
+    background-color: darken($brand-color, 20%);
+    /* border color matches track background */
+    border: 3px solid $complimentary-color;
+    border-radius: 8px;
+    /* this sets minumum height */
+    height: 40px;
+}
+
+// if the device doesn't have a "mouse" then turn off the scrollbar on gridchild
+// 'coarse' implies it's a phone or tablet
+@media (any-pointer: coarse) {
+    .gridChild {
+        scrollbar-width: none;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+// END: CSS for managing the "tunes" grids that appear on a number of pages
+
+.setChoice {
+    border: 2px solid $brand-color;
+    background-color: darken($complimentary-color, 6%);
+    border-radius: 8px;
+    padding: inherit;
+}
+
+.setRow {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.showTextInfo {
+    display: inline-block;
+    overflow: auto;
+    border: 2px solid $brand-color;
+    background-color: darken($complimentary-color, 6%);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.showFooterInfo {
+    display: block;
+    border: 2px solid $brand-color;
+    background-color: darken($complimentary-color, 6%);
+    border-radius: 8px;
+    margin: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+// START: LongBow
+.longBowTimers {
+    display: none;
+    overflow: auto;
+    border: 2px solid $brand-color;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.longBowProgressRL {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    background-color: lighten($brand-color, 20%);
+}
+
+.longBowProgressLR {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    background-color: lighten($brand-color, 10%);
+}
+
+.longBowBarLR {
+    background-color: darken($complimentary-color, 16%);
+    width: 0px;
+    height: 30px;
+    position: absolute;
+}
+
+.longBowBarRL {
+    background-color: darken($complimentary-color, 6%);
+    width: 100%;
+    height: 30px;
+    position: absolute;
+}
+// END: LongBow
+
+// START: Local mods to noUi sliders
+.noUi-target {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.noUi-horizontal {
+    border-radius: 50%;
+    height: 0.8rem;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 1rem;
+    height: 2.2rem;
+    left: -8px;
+    top: -6px;
+}
+
+html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+    right: -10px;
+    left: auto;
+}
+
+.noUi-handle {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    background: $brand-color;
+    cursor: default;
+}
+
+.noUi-handle::before,
+.noUi-handle::after {
+    background: none;
+}
+
+.noUi-tooltip {
+    display: block;
+    position: absolute;
+    border: 0 solid lightgray;
+    border-radius: 8px;
+    background: transparent;
+    color: $brand-color;
+    padding: 0 0.1rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.noUi-horizontal .noUi-tooltip {
+    transform: translate(-50%, 190%);
+    left: 50%;
+    bottom: 120%;
+    font-size: small;
+    padding: 0.3rem;
+    z-index: -1;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 1rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    background: darken($brand-color, 20%);
+    border-color: darken($brand-color, 20%);
+    cursor: pointer;
+}
+
+.noUi-horizontal .noUi-handle[data-handle='1'] {
+    background: green;  
+}
+
+.noUi-horizontal .noUi-handle[data-handle='1'] .noUi-tooltip {
+    transform: translate(-50%, 20%);
+    left: 50%;
+    bottom: 120%;
+    font-size: small;
+    padding: 0.3rem;
+    z-index: -1;
+}
+
+.noUi-connects,
+.noUi-connect {
+    background: steelblue;
+    opacity: 0.7;
+    border-radius: 50%;
+    border: none;
+}
+// END: Local mods to noUi sliders
+
+// START: controls for search and set control
+.setParentOuter,
+.searchParentOuter {
+    display: grid;
+    grid-template-columns: 65% 1fr;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: $brand-color;
+    padding: 0.5rem;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.setParentInner,
+.searchParentInner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.setChildInner,
+.searchChildInner {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+// END: controls for search and set control
+
+.container-createMD {
+    display: inline-block;
+    overflow: auto;
+    border: 2px solid $brand-color;
+    background-color: darken($complimentary-color, 15%);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    clear: both;
+}
+
+.container-createMD input {
+    width: 100%;
+    margin-bottom: 5px;
+    clear: both;
+}
+
+.container-createMD input[type=checkbox] {
+    width: 10%;
+    margin-bottom: 10px;
+    float: left;
+    clear: right;
+}
+
+.editABCpicture {
+    border:1px solid black;
+    width: 100%;
+}

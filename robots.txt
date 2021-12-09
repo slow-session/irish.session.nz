@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /mp3/
+Disallow: /tunebooks/
+
+Sitemap: https://irish.session.nz/sitemap.xml
