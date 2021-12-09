@@ -33,4 +33,4 @@ The evening is split into two parts:
 
 ## Other NZ Sessions
 
-* Ask on the <a href="{{ site.facebook_page }}">NZ Irish Sessions</a> Facebook page.
+* Ask on the <a href="{{ site.facebook_page }}">Wellington Irish Sessions</a> Facebook page.
