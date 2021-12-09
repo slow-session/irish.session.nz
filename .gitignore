@@ -2,7 +2,7 @@
 .sass-cache
 _site
 bin
-vendor/ruby
+vendor/bundle
 Gemfile.lock
 images/image_optim_cache.yml
 .jekyll-metadata
