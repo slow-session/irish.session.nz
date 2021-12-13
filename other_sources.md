@@ -15,6 +15,16 @@ Paddy Fahey tunes:
  * [Paddy Fahey tunes compiled by Maria Holohan (just the tunes)]({{ site.tunebooks_host }}/tunebooks/Paddy_Fahey_Tunes_Only_Maria_Holohan.pdf "PDF - 3M")
  * [The Tune Compositions of Paddy Fahey, Maria Holohon, MA Thesis, 1995]({{ site.tunebooks_host }}/tunebooks/Paddy_Fahey_Thesis_Maria_Holohan.pdf "PDF - 33M")
 
+The Northern Fiddler - Music and Musicians of Donegal and Tyrone:
+
+ * [The Northern Fiddler - Online](/northernfiddler/)
+ * [The Northern Fiddler - just the tunes!]({{ site.tunebooks_host }}/tunebooks/The_Northern_Fiddler_Tunes_Only.pdf "PDF - 11M")
+ * [The Northern Fiddler, Allen Feldman & Eamonn O'Doherty - complete book ]({{ site.tunebooks_host }}/tunebooks/The_Northern_Fiddler.pdf "PDF - 34M")
+
+Inishowen Traditional Music Project - Music from the Inishowen Peninsula, Donegal:
+
+ * [Interactive Music Archive 2021](https://inishowenmusicarchive.ie/interactive-archive/)
+
 Sets of tunes put together by Paddy O'Brien:
 
  * [O'Brien Tunes - Online](/obrientunes/)
@@ -24,12 +34,6 @@ Sets of tunes put together by Paddy O'Brien:
 Tommy Potts:
 
  * [Audio of a set of twelve video clips of Tommie Potts being interview by Mícheál Ó Súilleabháin](/pottstunes/)
-
- The Northern Fiddler - Music and Musicians of Donegal and Tyrone:
-
- * [The Northern Fiddler - Online](/northernfiddler/)
- * [The Northern Fiddler - just the tunes!]({{ site.tunebooks_host }}/tunebooks/The_Northern_Fiddler_Tunes_Only.pdf "PDF - 11M")
- * [The Northern Fiddler, Allen Feldman & Eamonn O'Doherty - complete book ]({{ site.tunebooks_host }}/tunebooks/The_Northern_Fiddler.pdf "PDF - 34M")
 
 Dunedin Fiddle Orchestra:
 
@@ -62,7 +66,7 @@ Tunebooks for this site
 
 We've decided to stop producing PDF versions of tunebooks for this site as it was difficult for us to maintain and we felt it led to people printing copies which meant trees were being cut down. 
 
-You can download a file containing all the ABCs used on this site. There are a number of tools you can use to read this file and print copies of tunes from it. We've used EasyABC in the past.
+You can download a file containing all the ABCs used on this site. There are a number of tools you can use to read this file and print copies of tunes from it. We've used [EasyABC](https://sourceforge.net/projects/easyabc/) in the past.
 
 <form id="ABCform">
     <input type="button" class="filterButton" value="Show ABC File" onclick="toggle(this);">
