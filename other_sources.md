@@ -1,5 +1,5 @@
 ---
-layout: page-js
+layout: page
 title: Other Sources
 permalink: /other_sources/
 ---
@@ -103,6 +103,10 @@ window.store = {
     {% endfor %}
 };
 </script>
+
+
+<!-- https://github.com/cure53/DOMPurify -->
+<script src="{{ site.js_host }}/js/purify.min.js"></script>
 
 <script src="{{ site.js_host }}/js/buildABCsource.js"></script>
 
