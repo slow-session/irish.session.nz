@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-js
 title: Other Sources
 permalink: /other_sources/
 ---
