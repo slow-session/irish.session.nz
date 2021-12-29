@@ -13,7 +13,7 @@ parts: AABB
 mp3_source: Comhaltas Ceoltóirí Éireann
 mp3_licence: CC-BY-NC-2.5
 mp3_url: http://media.comhaltas.ie/audio/cl458_mp3/cl458_7.mp3
-alt_mp3_url:
+alt_mp3_url: https://www.youtube.com/watch?v=dVf9qxVhcl4
 abc_source: The Session
 abc_url: https://thesession.org/tunes/2148
 abc: |
