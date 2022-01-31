@@ -23,6 +23,8 @@ permalink: /app/
 <img class="photo" src="/images/android-menu.png" alt="Tap on the menu icon in Chrome on Android.">
 <figcaption class="discrete">On Android, look for three vertical dots.</figcaption>
 </figure>
+
+<p>Later versions of Chrome may prompt you to <b>Add New Zealand Irish Sessions to Home Screen</b></p>
 </div><!-- /.secondary -->
 </div><!-- /.group -->
 
@@ -58,7 +60,7 @@ permalink: /app/
 <ol>
 <li>Open <code>irish.session.nz</code> in Chrome or Edge on your computer.</li>
 <li>Click on the install icon in the address bar.</li>
-<li>Click “Install” to confirm.</li>
+<li>Click "Open" to confirm.</li>
 </ol>
 
 <figure>
