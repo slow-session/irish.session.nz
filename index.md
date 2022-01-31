@@ -2,7 +2,7 @@
 layout: page
 title: New Zealand Irish Sessions
 ---
-We put this site together for people playing Irish Traditional Music in New Zealand. There's not that many of us so when we get together it's nice to have some tunes in common. 
+We put this site together for people playing Irish Traditional Music in New Zealand. There's not that many of us so when we get together it's nice to have some tunes in common.
 
 ## Tunes Archives
 
@@ -34,3 +34,7 @@ The evening is split into two parts:
 ## Other NZ Sessions
 
 * Ask on the <a href="{{ site.facebook_page }}">Wellington Irish Sessions</a> Facebook page.
+
+<div class="container-app">
+You can add our webpage to the home screen of your mobile phone and/or your desktop and use it as an app. See <a href="/app/">New Zealand Irish Sessions app <span role="presentation">📲</span></a>
+</div>

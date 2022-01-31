@@ -175,6 +175,23 @@ fieldset {
     padding: 5px 10px 0px 10px;
 }
 
+.container-app {
+    display: inline-block;
+    border: 2px solid $brand-color;
+    background-color: #f7c501;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px 10px 0px 10px;
+}
+
+@media all and (display-mode: standalone) {
+    .container-app {
+        display: none;
+    }    
+}
+
+
 .formParent {
     display: flex;
     width: 100%;
