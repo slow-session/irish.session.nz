@@ -18,7 +18,7 @@ mp3_url: https://www.facebook.com/video/video.php?v=10157506476529125
 alt_mp3_url:
 source: Wellington
 abc_source: this manuscript
-abc_url: /images/CedarsOfLebanon.jpg
+abc_url: /images/CedarsOfLebanon.png
 abc: |
     X: 1
     T: Cedars of Lebanon

@@ -17,7 +17,7 @@ slow_tunes_max: 100
 reg_tunes_max: 20
 
 header: yes
-header_image: images/banner.jpg
+header_image: images/banner.png
 
 #
 # used for split site working like the DEV site
@@ -70,7 +70,7 @@ facebook_user: WellingtonSession
 facebook_app_id: 966242223397117
 facebook_locale: en_US
 facebook_page: https://www.facebook.com/groups/WellingtonSession/
-facebook_image: /images/pubscene-small.jpg
+facebook_image: /images/pubscene-small.png
 
 # Needed?
 # Twitter Cards
