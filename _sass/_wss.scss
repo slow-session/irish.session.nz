@@ -175,23 +175,6 @@ fieldset {
     padding: 5px 10px 0px 10px;
 }
 
-.container-app {
-    display: inline-block;
-    border: 2px solid $brand-color;
-    background-color: #f7c501;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 5px 10px 0px 10px;
-}
-
-@media all and (display-mode: standalone) {
-    .container-app {
-        display: none;
-    }    
-}
-
-
 .formParent {
     display: flex;
     width: 100%;
@@ -651,4 +634,30 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .editABCpicture {
     border:1px solid black;
     width: 100%;
+}
+
+// PWA controls
+.container-app {
+    display: inline-block;
+    border: 2px solid $brand-color;
+    background-color: #f7c501;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px 10px 0px 10px;
+}
+
+.goback {
+    display: none;
+}
+
+@media all and (display-mode: standalone) {
+    .container-app {
+        display: none;
+    }    
+    .goback {
+        display: block;
+        padding: 4px 2px;
+        text-align: center;
+    }
 }
