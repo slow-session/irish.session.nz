@@ -9,7 +9,7 @@ We put this site together for people playing Irish Traditional Music in New Zeal
 We've accumulated a number of resources which you may find useful:
 
 * <a href="/tunes_archive/">Tunes Archive</a>
-  * Over 450 tunes in a form suitable for learning by ear
+  * Over 480 tunes in a form suitable for learning by ear
 * <a href="/latest/">Latest Tunes</a>
   * The latest additions to our archive
 * <a href="/charlie_montgomery/">Charlie Montgomery</a>
