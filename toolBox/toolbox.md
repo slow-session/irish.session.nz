@@ -30,6 +30,10 @@ Simply replace the ABC on that page with your ABC and the musical notation shoul
 redraw. You can also listen to your version played through the ABC player we use
 on the various *session.nz* webpages
 
+[addBlackboardABC](/addBlackboardABC/)
+-------
+If you'd like add the "blackboard ABC" (or is it really "whiteboard ABC" these days) to your ABC notation, this tool may help. You may have to hand tweak the output in some cases.
+
 [Create MD File](/createMD/)
 --------
 If you want to help us add a new tune to the [Tunes Archive](/tunes_archive/) you can use the
