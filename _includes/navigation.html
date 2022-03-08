@@ -1,10 +1,22 @@
+<!-- pwa back button - shown if needed -->
+<div class="row">
+    <a href="javascript:history.go(-1)" class="goback" aria-labelledby="backtitle">
+        <svg  xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32" width="30" role="img">
+            <title id="backtitle">back</title>
+            <circle fill="rgb(170,68,17)" cx="16" cy="16" r="15.75"/>
+            <polygon fill="rgb(255,255,204)" points="20,26 8,16 20,6"/>
+        </svg>
+    </a>
+</div>
+
+<!-- menu bar-->
 <nav class="navbar">
   <nav class="row">
     <div id="nav">
-      <ul class="columns medium-11 left primary-nav">
-
-	<li id="toggleMenu"><a href="#nav">Menu</a></li>
-	<li id="hideMenu"><a href="#toggleMenu">Menu</a></li>
+   
+    <ul class="columns medium-11 left primary-nav">
+        <li id="toggleMenu"><a href="#nav">Menu</a></li>
+	    <li id="hideMenu"><a href="#toggleMenu">Menu</a></li>
 
 	{% for nav in site.data.nav %}
 	  {% if nav.subcategories != null %}
@@ -36,12 +48,13 @@
 	  {% endif %}
 	{% endfor %}
       </ul>
-
-      <ul class="columns medium-1 right primary-nav">
+    
+    <ul class="columns medium-1 right primary-nav">
 	{% for socials in site.data.socials %}
-	  <li class="right"><a href="{{ socials.href }}"><span class="icon-{{ socials.title }} socials"></span> {{ socials.title }}</a></li>
+        <li class="right"><a href="{{ socials.href }}"><span class="icon-{{ socials.title }} socials"></span> {{ socials.title }}</a></li>
 	{% endfor %}
-      </ul>
+    </ul>
+
     </div>
   </nav>
 </nav>

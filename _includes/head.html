@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name=viewport content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
   {% if site.author %}
     <meta name="author" content="{{ site.author }}">
   {% endif %}
@@ -14,6 +14,17 @@
   {%else%}
     <meta name="keywords" content="{{ site.keywords }}">
   {% endif %}
+  
+  <!-- pwabuilder-->
+  <link rel="manifest" href="/manifest.json" />
+  
+  <!-- pwaupdate.js loaded from https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate -->
+  <script type="module">
+    import '/js/pwaupdate.js';
+    const el = document.createElement('pwa-update');
+    el.swpath = "/pwabuilder-sw.js";
+    document.body.appendChild(el);
+  </script>
 
   <link href="{{ site.http_host }}/css/main.css" media="screen" rel="stylesheet" type="text/css">
   
@@ -28,13 +39,14 @@
   <!-- Colour should match $primary_color in _sass/_variables.scss -->
   <!-- See https://stackoverflow.com/questions/26960703/how-to-change-the-color-of-header-bar-and-address-bar-in-newest-chrome-version-o/26960753#26960753 -->
   <!-- Chrome, Firefox OS and Opera -->
-  <meta name="theme-color" content="#282828">
+  <meta name="theme-color" content="#F7C501">
   <!-- Windows Phone -->
-  <meta name="msapplication-navbutton-color" content="#282828">
+  <meta name="msapplication-navbutton-color" content="#F7C501">
   <!-- iOS Safari -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
   {% include metadata.html %}
+
 
 </head>

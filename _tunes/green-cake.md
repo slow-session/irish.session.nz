@@ -6,7 +6,7 @@ rhythm: reel
 notes: By Jonathan Berkahn
 date: 2021-07-27
 regtuneoftheweek:
-slowtuneoftheweek: 2021-12-29
+slowtuneoftheweek: 2021-12-30
 mp3_file: /mp3/green-cake.mp3
 repeats: 2
 parts: AABB

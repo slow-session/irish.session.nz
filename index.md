@@ -2,14 +2,14 @@
 layout: page
 title: New Zealand Irish Sessions
 ---
-We put this site together for people playing Irish Traditional Music in New Zealand. There's not that many of us so when we get together it's nice to have some tunes in common. 
+We put this site together for people playing Irish Traditional Music in New Zealand. There's not that many of us so when we get together it's nice to have some tunes in common.
 
 ## Tunes Archives
 
 We've accumulated a number of resources which you may find useful:
 
 * <a href="/tunes_archive/">Tunes Archive</a>
-  * Over 450 tunes in a form suitable for learning by ear
+  * Over 480 tunes in a form suitable for learning by ear
 * <a href="/latest/">Latest Tunes</a>
   * The latest additions to our archive
 * <a href="/charlie_montgomery/">Charlie Montgomery</a>
@@ -34,3 +34,7 @@ The evening is split into two parts:
 ## Other NZ Sessions
 
 * Ask on the <a href="{{ site.facebook_page }}">Wellington Irish Sessions</a> Facebook page.
+
+<div class="container-app">
+You can add our webpage to the home screen of your mobile phone and/or your desktop and use it as an app. See <a href="/app/">New Zealand Irish Sessions app <span role="presentation">📲</span></a>
+</div>
