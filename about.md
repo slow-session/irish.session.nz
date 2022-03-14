@@ -8,7 +8,7 @@ The website is built and maintained by a couple of people:
  * Ted Cizadlo
  * Andy Linton
 
-We both live in Wellington, New Zealand and we're both enthusiastic local session players and we built the site to help us and other folks at our local session in our tune learning. Other people around the world have found it useful too.
+We both live in Wellington, New Zealand and we're both enthusiastic session players. We built the site to help us and other folks at our local session in our tune learning. Other people around the world have found it useful too.
 
 Go raibh míle maith agat to all the players of the tune clips who've given us permission to use their recordings. We really appreciate your help.
 
