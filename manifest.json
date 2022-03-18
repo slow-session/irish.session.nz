@@ -7,8 +7,8 @@
   "orientation": "any",
   "scope": "/",
   "short_name": "NZ Irish Sessions",
-  "id": "/?homescreen=1",
-  "start_url": "/?homescreen=1",
+  "id": "/",
+  "start_url": "/",
   "theme_color": "#F7C501",
   "icons": [
     {
