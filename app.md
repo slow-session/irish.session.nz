@@ -39,7 +39,6 @@ permalink: /app/
 <li>Select “<strong>Add to home screen</strong>.”</li>
 <li>Tap “Add” to confirm.</li>
 </ol>
-<p>Once you’ve added The Session to your home screen, whenever you tap the icon, The Session will launch just like any other app.</p>
 </div><!-- /.primary -->
 <div class="secondary">
 <figure>
@@ -48,6 +47,8 @@ permalink: /app/
 </figure>
 </div><!-- /.secondary -->
 </div><!-- /.group -->
+
+<p>Once you’ve added the NZ Irish Sessions app to your home screen, whenever you tap the icon, NZ Irish Sessions will launch just like any other app.</p>
 
 <h2>Desktop</h2>
 
