@@ -3,49 +3,47 @@ layout: page-js
 title: Add Blackboard ABC
 permalink: /addBlackboardABC/
 ---
-Check the output to make sure it's OK and hand tweak the w: lines in the ABC if you need to.
+<p>
+See <a href="https://www.irishconcertinalessons.com/blogs/reading-abc-notation-in-irish-traditional-music">Reading ABC Notation in Irish Traditional Music</a> for more information on this format.
+</p>
 
-<div class="row">
-    <h3>Load an ABC file:</h3>
+<div>
+    1. Load an ABC file or paste your ABC below:
     <input type="file" id="files" class='filterButton' name="files[]" accept=".abc" />
     <output id="fileInfo"></output>
     <p />
-</div>
-<div class="row">
-    <h3>Or paste your ABC here:</h3>
     <!-- Read the modified ABC and play if requested -->
     <textarea name='abc' id="textAreaABC" class="abcText" rows="13" spellcheck="false">
     </textarea>
-    <!-- Show ABC errors -->
-    <div class="showTextInfo"><strong>ABC Status: </strong><span id='abcWarnings'></span></div>
-
 </div>
-<div class="row">
+<div>
     <!-- Draw the dots -->
     <div class="output">
         <div id="abcPaper" class="abcPaper"></div>
         <div id="abcAudio"></div>
-    </div>
+        <!-- Show ABC errors -->
+        <div class="showTextInfo"><strong>ABC Status: </strong><span id='abcWarnings'></span></div>
 
-    <!-- Controls for ABC player -->
-    <div id="pageABCplayer"></div>
 </div>
-<!-- Group the input and controls for ABC-->
-<div class="row">
-<!-- Add the Blackboard ABC-->
-    <h3>Add the Blackboard ABC:</h3>
+
+<div>
+    <!-- Add the Blackboard ABC-->
+    2. Now add the Blackboard ABC:
     <form>
         <input value='Add Blackboard ABC' type='button' class='filterButton'
             onclick='addBlackboardABC(document.getElementById("textAreaABC").value)' />
     </form>
     <p />
 </div>
-<div class="row">
+<div>
+    3. Check the output to make sure it's OK and hand tweak the w: lines in the ABC if you need to.
+</div>
+<div>
     <textarea name='abc' id="textAreaABCplus" class="abcText" rows="13" spellcheck="false"></textarea>
 </div>
-<div class="row">
+<div>
     <!-- Allow the user to save their ABC-->
-    <h3>Don’t forget to ‘Download ABC’ to save your work:</h3>
+    4. Don’t forget to ‘Download ABC’ to save your work:
     <form>
         <span title="Download the ABC you've entered. Don't lose your work!">
             <input value='Download ABC' type='button' class='filterButton'
