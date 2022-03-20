@@ -3,7 +3,7 @@
   "description": "Irish trad tune archive",
   "dir": "ltr",
   "display": "standalone",
-  "name": "New Zealand Irish Sessions",
+  "name": "NZ Irish Sessions",
   "orientation": "any",
   "scope": "/",
   "short_name": "NZ Irish Sessions",
@@ -12,36 +12,16 @@
   "theme_color": "#F7C501",
   "icons": [
     {
-      "src": "/favicon.ico"
-    },
-    {
-      "src": "/images/60x60.png",
-      "type": "image/png",
-      "sizes": "60x60"
-    },
-    {
-      "src": "/images/76x76.png",
-      "type": "image/png",
-      "sizes": "76x76"
-    },
-    {
-      "src": "/images/120x120.png",
-      "type": "image/png",
-      "sizes": "120x120"
-    },
-    {
-      "src": "/images/152x152.png",
-      "type": "image/png",
-      "sizes": "152x152"
-    },
-    {
-      "src": "/images/300x304.png",
-      "type": "image/png",
-      "sizes": "300x304"
-    },
-    {
       "src": "/favicon.ico",
       "type": "image/x-icon"
+    },
+    {
+        "src":"/images/android-chrome-192x192.png",
+        "sizes":"192x192","type":"image/png"
+    },
+    {
+        "src":"/images/android-chrome-512x512.png",
+        "sizes":"512x512","type":"image/png"
     }
   ]
 }
