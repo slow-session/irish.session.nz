@@ -8,7 +8,7 @@ See <a href="https://www.irishconcertinalessons.com/blogs/reading-abc-notation-i
 </p>
 
 <div>
-    1. Load an ABC file or paste your ABC below:
+    1. Load an ABC file or paste your ABC below
     <input type="file" id="files" class='filterButton' name="files[]" accept=".abc" />
     <output id="fileInfo"></output>
     <p />
@@ -28,7 +28,7 @@ See <a href="https://www.irishconcertinalessons.com/blogs/reading-abc-notation-i
 
 <div>
     <!-- Add the Blackboard ABC-->
-    2. Now add the Blackboard ABC:
+    2. Now add the Blackboard ABC
     <form>
         <input value='Add Blackboard ABC' type='button' class='filterButton'
             onclick='addBlackboardABC(document.getElementById("textAreaABC").value)' />
@@ -36,21 +36,26 @@ See <a href="https://www.irishconcertinalessons.com/blogs/reading-abc-notation-i
     <p />
 </div>
 <div>
-    3. Check the output to make sure it's OK and hand tweak the w: lines in the ABC if you need to.
+    3. Check the output to make sure it's OK and hand tweak the w: lines in the ABC if you need to
 </div>
 <div>
     <textarea name='abc' id="textAreaABCplus" class="abcText" rows="13" spellcheck="false"></textarea>
 </div>
 <div>
     <!-- Allow the user to save their ABC-->
-    4. Don’t forget to ‘Download ABC’ to save your work:
+    4. Don’t forget to ‘Download ABC’ to save your work
     <form>
-        <span title="Download the ABC you've entered. Don't lose your work!">
-            <input value='Download ABC' type='button' class='filterButton'
+        <input value='Download ABC' type='button' class='filterButton'
                 onclick='wssTools.downloadABCFile(document.getElementById("textAreaABCplus").value)' />
-        </span>
     </form>
     <p />
+</div>
+
+<div>
+   5. Reset the page before the next tune
+   <form>
+       <input value='Reset the page' id='reset' type='button' class='filterButton' aria-label="Reset page" onclick='resetAddBlackboardABCpage()'/>
+    </form>
 </div>
 
 <script>
@@ -180,5 +185,15 @@ function getNotes(tuneABC) {
     const lines = tuneABC.split(/[\r\n]+/).map(line => line.trim());
     const keyIdx = lines.findIndex(line => line.match(KEY_LINE_PATTERN));
     return lines.splice(keyIdx + 1, lines.length).join('\n').trim();
+}
+
+function resetAddBlackboardABCpage () {
+    document.getElementById("abcPaper").innerHTML = '';
+    document.getElementById("abcPaper").style.paddingBottom = "0px";
+    document.getElementById("abcPaper").style.overflow = "auto";
+    textAreaABC.value = "";
+    textAreaABCplus.value = "";
+    document.getElementById('abcWarnings').innerHTML = 'No errors';
+    files.value = '';
 }
 </script>
