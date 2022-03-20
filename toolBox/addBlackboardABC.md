@@ -39,7 +39,7 @@ See <a href="https://www.irishconcertinalessons.com/blogs/reading-abc-notation-i
     3. Check the output to make sure it's OK and hand tweak the w: lines in the ABC if you need to
 </div>
 <div>
-    <textarea name='abc' id="textAreaABCplus" class="abcText" rows="13" spellcheck="false"></textarea>
+    <textarea name='abc' id="textAreaABCplus" class="abcText" rows="13" spellcheck="false" placeholder="The modified ABC will appear here..."></textarea>
 </div>
 <div>
     <!-- Allow the user to save their ABC-->
