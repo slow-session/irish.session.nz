@@ -1,5 +1,5 @@
 ---
-title: Salvation
+title: The Salvation
 titleID: salvation.md
 key: A
 rhythm: reel
