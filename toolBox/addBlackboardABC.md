@@ -16,6 +16,7 @@ See <a href="https://www.irishconcertinalessons.com/blogs/reading-abc-notation-i
     <textarea name='abc' id="textAreaABC" class="abcText" rows="13" spellcheck="false">
     </textarea>
 </div>
+
 <div>
     <!-- Draw the dots -->
     <div class="output">
@@ -35,12 +36,14 @@ See <a href="https://www.irishconcertinalessons.com/blogs/reading-abc-notation-i
     </form>
     <p />
 </div>
+
 <div>
     3. Check the output to make sure it's OK and hand tweak the w: lines in the ABC if you need to
 </div>
 <div>
     <textarea name='abc' id="textAreaABCplus" class="abcText" rows="13" spellcheck="false" placeholder="The modified ABC will appear here..."></textarea>
 </div>
+
 <div>
     <!-- Allow the user to save their ABC-->
     4. Don’t forget to ‘Download ABC’ to save your work
@@ -49,13 +52,6 @@ See <a href="https://www.irishconcertinalessons.com/blogs/reading-abc-notation-i
                 onclick='wssTools.downloadABCFile(document.getElementById("textAreaABCplus").value)' />
     </form>
     <p />
-</div>
-
-<div>
-   5. Reset the page before the next tune
-   <form>
-       <input value='Reset the page' id='reset' type='button' class='filterButton' aria-label="Reset page" onclick='resetAddBlackboardABCpage()'/>
-    </form>
 </div>
 
 <script>
@@ -67,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     } else {
         fileInfo.innerHTML = 'The File APIs are not fully supported in this browser.';
     }
-    
     audioPlayer.displayABC(textAreaABC.value);
 });
 
@@ -95,6 +90,8 @@ function handleABCFileSelect(evt) {
                 abcPaper.style.overflow = "auto";
                 abcAudio.innerHTML = '';
             }
+            // If the input textarea has changed then this needs reset
+            textAreaABCplus.value = "";
         };
         reader.readAsText(f);
     }
@@ -154,6 +151,8 @@ function addTextToLine(value) {
 
     // fix double stops
     wLine = wLine.replace(/\[ ([A-Za-z]) ([A-Za-z]) \]/g, '$1$2');
+    // fix ties
+    wLine = wLine.replace(/ - /g, '-');
 
     // uppercase the higher octave notes
     wLine = wLine.replace(/[a-g]/g, "$&'").toUpperCase();
@@ -187,13 +186,8 @@ function getNotes(tuneABC) {
     return lines.splice(keyIdx + 1, lines.length).join('\n').trim();
 }
 
-function resetAddBlackboardABCpage () {
-    document.getElementById("abcPaper").innerHTML = '';
-    document.getElementById("abcPaper").style.paddingBottom = "0px";
-    document.getElementById("abcPaper").style.overflow = "auto";
-    textAreaABC.value = "";
+function resetTextAreaABCplus () {
+    console.log("resetTextAreaABCplus");
     textAreaABCplus.value = "";
-    document.getElementById('abcWarnings').innerHTML = 'No errors';
-    files.value = '';
 }
 </script>

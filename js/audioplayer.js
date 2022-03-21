@@ -62,14 +62,13 @@ const audioPlayer = (function () {
         let tuneTitle = document.getElementById("tuneTitle");
         if (tuneTitle) {
             tuneTitle.innerHTML =
-                `<h2>${item.title}<span> - ${item.key} ${item.rhythm}</span></h2>`;
+                `<h2>${item.title}</h2>`;
         }
         let tuneInfo = document.getElementById("tuneInfo");
         if (tuneInfo) {
+            tuneInfo.innerHTML = `${item.key} ${item.rhythm}`;
             if (item.mp3_source) {
-                tuneInfo.innerHTML = "Source: " + item.mp3_source;
-            } else {
-                tuneInfo.innerHTML = "";
+                tuneInfo.innerHTML += `, Source: ${item.mp3_source}`;
             }
         }
 
