@@ -1,5 +1,5 @@
 ---
-title: Galtee
+title: The Galtee
 titleID: galtee.md
 key: Ador
 rhythm: reel
