@@ -12,7 +12,7 @@ repeats: 2
 parts: AABB
 mp3_source: Marinie Tobin
 mp3_licence: © Marinie Tobin All Rights Reserved.
-mp3_url: https://youtu.be/YEdhHz9yRIs
+mp3_url: https://www.youtube.com/watch?v=YEdhHz9yRIs
 alt_mp3_url: 
 abc_source: The Session
 abc_url: https://thesession.org/tunes/21180
