@@ -75,12 +75,6 @@ facebook_locale: en_US
 facebook_page: https://www.facebook.com/groups/WellingtonSession/
 facebook_image: /images/pubscene-small.png
 
-# Needed?
-# Twitter Cards
-twitter_user:
-twitter_card: fals
-twitter_image: #enter a default image (at least 200x200px) to use here for posts/pages that don't have one.
-
 collections:
     tunes:
         output: true
