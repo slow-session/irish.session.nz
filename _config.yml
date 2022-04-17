@@ -20,8 +20,6 @@ header: yes
 header_image: images/banner.png
 
 #
-# used for split site working like the DEV site
-#
 # NOTE: leave these blank for the production site 
 # Also overriden by the _config_localhost.yml when testing locally
 #
