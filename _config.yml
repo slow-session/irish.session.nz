@@ -53,7 +53,7 @@ markdown: kramdown
 kramdown:
     input: GFM
 
-destination: /var/www/irish-session-nz/
+destination: _site
 
 # Compress our Css
 sass:
