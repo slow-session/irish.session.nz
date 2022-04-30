@@ -310,6 +310,13 @@ input[type=number] {
     padding-top: 75%; /* 4:3 Aspect Ratio (divide 3 by 4 = 0.75) */
   }
   
+.container-iframe-audio {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 50px; 
+  }
+  
   /* Then style the iframe to fit in the container div with full height and width */
   .responsive-iframe {
     position: absolute;
