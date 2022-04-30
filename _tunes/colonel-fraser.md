@@ -15,7 +15,7 @@ parts: AABBCCDDEE
 mp3_source: Pat Higgins
 mp3_licence: <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a>
 mp3_url: https://www.youtube.com/watch?v=zKDzv7U5o_w
-alt_mp3_url: /mp3/colonel-fraser-banjo.mp3
+alt_mp3_url: https://irish.session.nz/mp3/colonel-fraser-banjo.mp3
 source: Wellington
 abc_source: Pat Higgins
 abc_url:
