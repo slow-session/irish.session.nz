@@ -98,7 +98,7 @@ const wssTools = (function () {
         } else if (url.endsWith(".mp3")) {   
             let myURL = encodeURI(url);
 
-            return `<div class="container-iframe" style="padding-top:50px;"><audio class="responsive-iframe"  aria-label="iframe playing mp3 file" controls style="height:50px;"><source src="${myURL}" type="audio/mp3" ></audio></div>`;
+            return `<div class="container-iframe" style="padding-top:50px !important;"><audio class="responsive-iframe"  aria-label="iframe playing mp3 file" controls style="height:50px;"><source src="${myURL}" type="audio/mp3" ></audio></div>`;
             
         } else {
             // Don't recognize this URL
