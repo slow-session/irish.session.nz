@@ -104,7 +104,8 @@ const tradlePlayer = (function () {
 
     function recordGuess(title){
         if (title === "") {
-            return;
+            //return;
+            title = "Skip";
         }
             
         if (guessCount.guess < 6) {

@@ -15,6 +15,7 @@ permalink: /tradle/
 window.store = {
 {% for tune in sortedtunes %}
 {% if tune.mp3_file contains '/mp3/cm/' %}{% continue %}{% endif %}
+{% unless tune.mp3_file %}{% continue %}{% endunless%}
     "{{ tuneID }}": {
         "title": "{{ tune.title | xml_escape }}",
         "tuneID": "{{ tuneID }}",
@@ -30,8 +31,9 @@ window.store = {
 
 {% assign tuneID = 1 %}
 let titleTags = [
-    {% for tune in sortedtunes %}{% if tune.mp3_file contains '/mp3/cm/' %}{% continue %}{% endif %}"{{ tune.title | xml_escape }}",
+    {% for tune in sortedtunes %}{% if tune.mp3_file contains '/mp3/cm/' %}{% continue %}{% endif %}{% unless tune.mp3_file %}{% continue %}{% endunless %}"{{ tune.title | xml_escape }}",
     {% assign tuneID = tuneID | plus: 1 %}{% endfor %}
+    "Skip",
 ];
 </script>
 
@@ -39,8 +41,9 @@ let titleTags = [
 {% assign my_lt = '>' %}
 {% assign my_gt = '<' %}
 <datalist id="titleList">
-{% for tune in sortedtunes %}{% if tune.mp3_file contains '/mp3/cm/' %}{% continue %}{% endif %}{{ my_gt }}option value="{{ tune.title | xml_escape }}"{{ my_lt }}{{ my_gt }}/option{{ my_lt }}
+{% for tune in sortedtunes %}{% if tune.mp3_file contains '/mp3/cm/' %}{% continue %}{% endif %}{% unless tune.mp3_file %}{% continue %}{% endunless %}{{ my_gt }}option value="{{ tune.title | xml_escape }}"{{ my_lt }}{{ my_gt }}/option{{ my_lt }}
 {% assign tuneID = tuneID | plus: 1 %}{% endfor %}
+<option value="Skip"></option>
 </datalist>
 
 <div class="showTradle">
