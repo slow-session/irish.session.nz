@@ -664,3 +664,33 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         text-align: center;
     }
 }
+
+// Tradle controls
+
+.tradleHeader {
+    text-align: center;
+}
+
+.showTradle {
+    overflow: auto;
+    border: 2px solid $brand-color;
+    background-color: darken($complimentary-color, 6%);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    min-height: 20ex;
+}
+
+.guessTradleEven {
+    background-color: darken($complimentary-color, 16%);
+}
+
+.playpauseIcon {
+    background-image: url("/images/play-pause.svg") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+}
+p.tradleLabel {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
