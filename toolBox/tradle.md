@@ -1,6 +1,6 @@
 ---
 layout: page-tradle
-permalink: tradle
+permalink: /tradle/
 ---
 
 <h1 class="tradleHeader">Tradle</h1>
