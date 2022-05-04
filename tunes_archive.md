@@ -3,17 +3,12 @@ layout: page-js
 title: Tunes Archive
 permalink: /tunes_archive/
 ---
-<p>
-Play a tune now using the <strong>Play Now</strong> button or use the
-link to the Tune Page for a more traditional view. We add new tunes to the archive reasonably often.
-You can check those out in our <a href="/latest/"> Latest Tunes</a> page.
-</p>
-
+    
+{% assign tunes = site.tunes %}
+{% assign sortedtunes = tunes | sort: 'titleID' %}
+{% assign tuneID = 1 %}
 <script>
 window.store = {
-    {% assign tunes = site.tunes %}
-    {% assign sortedtunes = tunes | sort: 'titleID' %}
-    {% assign tuneID = 1 %}
     {% for tune in sortedtunes %}
         "{{ tuneID }}": {
             "title": "{{ tune.title | xml_escape }}",
@@ -26,12 +21,17 @@ window.store = {
             "repeats": "{{ tune.repeats }}",
             "parts": "{{ tune.parts }}",
             "abc": {{ tune.abc | jsonify }}
-        }{% unless forloop.last %},{% endunless %}
-        {% assign tuneID = tuneID | plus: 1 %}
+        }{% unless forloop.last %},{% endunless %}{% assign tuneID = tuneID | plus: 1 %}
     {% endfor %}
 };
 </script>
 
+<p>
+Play a tune now using the <strong>Play Now</strong> button or use the
+link to the Tune Page for a more traditional view. 
+</p>
+
+ - <input class="filterButton" type="button" onclick="window.location.href='/latest/';" value="Latest Tunes" /> - see the tunes we've added most recently
 {% include jukebox.html %}
 {% include tradle.html %}
 
