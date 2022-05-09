@@ -7,9 +7,7 @@ description: Irish trad tune archive
 
 # Parameters embedded in site
 slowsession_time: '7:30 to 8:30'
-#slowsession_time: "Please check back when the world is normal!"
 session_time: '8:45 to late'
-#session_time: "Please check back when the world is normal!"
 
 # no of tunes to show in latest.md etc
 latest_tunes_max: 20
@@ -19,8 +17,6 @@ reg_tunes_max: 20
 header: yes
 header_image: images/banner.png
 
-#
-# used for split site working like the DEV site
 #
 # NOTE: leave these blank for the production site 
 # Also overriden by the _config_localhost.yml when testing locally
@@ -74,12 +70,6 @@ facebook_app_id: 966242223397117
 facebook_locale: en_US
 facebook_page: https://www.facebook.com/groups/WellingtonSession/
 facebook_image: /images/pubscene-small.png
-
-# Needed?
-# Twitter Cards
-twitter_user:
-twitter_card: fals
-twitter_image: #enter a default image (at least 200x200px) to use here for posts/pages that don't have one.
 
 collections:
     tunes:

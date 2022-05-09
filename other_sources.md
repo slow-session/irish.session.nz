@@ -12,14 +12,14 @@ Charlie Montgomery:
 
 Paddy Fahey tunes:
 
- * [Paddy Fahey tunes compiled by Maria Holohan (just the tunes)]({{ site.tunebooks_host }}/tunebooks/Paddy_Fahey_Tunes_Only_Maria_Holohan.pdf "PDF - 3M")
- * [The Tune Compositions of Paddy Fahey, Maria Holohon, MA Thesis, 1995]({{ site.tunebooks_host }}/tunebooks/Paddy_Fahey_Thesis_Maria_Holohan.pdf "PDF - 33M")
+ * [Paddy Fahey tunes compiled by Maria Holohan (PDF - 3M) (just the tunes)]({{ site.tunebooks_host }}/tunebooks/Paddy_Fahey_Tunes_Only_Maria_Holohan.pdf)
+ * [The Tune Compositions of Paddy Fahey, Maria Holohon, MA Thesis, 1995 (PDF - 33M)]({{ site.tunebooks_host }}/tunebooks/Paddy_Fahey_Thesis_Maria_Holohan.pdf)
 
 The Northern Fiddler - Music and Musicians of Donegal and Tyrone:
 
  * [The Northern Fiddler - Online](/northernfiddler/)
- * [The Northern Fiddler - just the tunes!]({{ site.tunebooks_host }}/tunebooks/The_Northern_Fiddler_Tunes_Only.pdf "PDF - 11M")
- * [The Northern Fiddler, Allen Feldman & Eamonn O'Doherty - complete book ]({{ site.tunebooks_host }}/tunebooks/The_Northern_Fiddler.pdf "PDF - 34M")
+ * [The Northern Fiddler (PDF - 11M)- just the tunes!]({{ site.tunebooks_host }}/tunebooks/The_Northern_Fiddler_Tunes_Only.pdf)
+ * [The Northern Fiddler, Allen Feldman & Eamonn O'Doherty (PDF - 34M) - complete book ]({{ site.tunebooks_host }}/tunebooks/The_Northern_Fiddler.pdf)
 
 Inishowen Traditional Music Project - Music from the Inishowen Peninsula, Donegal:
 
@@ -28,8 +28,8 @@ Inishowen Traditional Music Project - Music from the Inishowen Peninsula, Donega
 Sets of tunes put together by Paddy O'Brien:
 
  * [O'Brien Tunes - Online](/obrientunes/)
- * [Tune Sets Arranged by Paddy O'Brien, Co. Tipperary - local copy]({{ site.tunebooks_host }}/tunebooks/obrien.pdf "PDF")
- * [Tune Sets Arranged by Paddy O'Brien, Co. Tipperary - original](http://www.ceolas.org/pub/tunes/tunes.pdf/POB.pdf)
+ * [Tune Sets Arranged by Paddy O'Brien, Co. Tipperary (PDF) - local copy]({{ site.tunebooks_host }}/tunebooks/obrien.pdf)
+ * [Tune Sets Arranged by Paddy O'Brien, Co. Tipperary (PDF) - original](http://www.ceolas.org/pub/tunes/tunes.pdf/POB.pdf)
  
 Tommy Potts:
 

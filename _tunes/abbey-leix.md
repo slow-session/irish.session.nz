@@ -15,7 +15,7 @@ mp3_file: /mp3/abbey-leix.mp3
 mp3_source: Ado Barker
 mp3_licence: "© Adrian Barker. All Rights Reserved."
 mp3_url:
-alt_mp3_url:
+alt_mp3_url: https://irish.session.nz/mp3/abbey-leix-banjo.mp3
 source: Wellington
 abc_source: The Session
 abc_url: https://thesession.org/tunes/1288

@@ -310,6 +310,13 @@ input[type=number] {
     padding-top: 75%; /* 4:3 Aspect Ratio (divide 3 by 4 = 0.75) */
   }
   
+.container-iframe-audio {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 50px; 
+  }
+  
   /* Then style the iframe to fit in the container div with full height and width */
   .responsive-iframe {
     position: absolute;
@@ -656,4 +663,34 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         padding: 4px 2px;
         text-align: center;
     }
+}
+
+// Tradle controls
+
+.tradleHeader {
+    text-align: center;
+}
+
+.showTradle {
+    overflow: auto;
+    border: 2px solid $brand-color;
+    background-color: darken($complimentary-color, 6%);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    min-height: 20ex;
+}
+
+.guessTradleEven {
+    background-color: darken($complimentary-color, 16%);
+}
+
+.playpauseIcon {
+    background-image: url("/images/play-pause.svg") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat;
+}
+p.tradleLabel {
+    margin-top: 1rem;
+    margin-bottom: 0;
 }

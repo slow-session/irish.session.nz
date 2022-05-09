@@ -84,6 +84,7 @@ const wssTools = (function () {
             let myURL = url.split("vimeo.com/")[1];
 
             return `<div class="container-iframe"><iframe class="responsive-iframe" aria-label="iframe showing vimeo video" src="https://player.vimeo.com/video/${myURL}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>`;
+
         } else if (url.startsWith("https://soundcloud.com/")) {
             let myURL = encodeURI(url);
 
@@ -94,6 +95,11 @@ const wssTools = (function () {
 
             return `<div class="container-iframe"><video class="responsive-iframe" aria-label="iframe showing comhaltas video" controls><source src="${myURL}" type="video/mp4"></video></div>`;
 
+        } else if (url.endsWith(".mp3")) {   
+            let myURL = encodeURI(url);
+
+            return `<div class="container-iframe-audio"><audio class="responsive-iframe"  aria-label="iframe playing mp3 file" controls><source src="${myURL}" type="audio/mp3" ></audio></div>`;
+            
         } else {
             // Don't recognize this URL
             return "";
