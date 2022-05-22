@@ -12,10 +12,11 @@ parts: AABB
 regtuneoftheweek:
 slowtuneoftheweek: 2021-02-21
 mp3_file: /mp3/i-neer-shall-wean-her.mp3
-mp3_licence: <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a>
-mp3_source: Wellington Session
-mp3_url:
-abc_url:
+mp3_licence: <a href="https://www.youtube.com/yt/copyright/fair-use.html">Fair Use</a>
+mp3_source: Paula Houton & Melanie Houton
+mp3_url: https://www.youtube.com/watch?v=-uJVzbDHSVI?start=99
+abc_source: The Session
+abc_url: https://thesession.org/tunes/803
 source: Wellington
 abc: |
     X: 5

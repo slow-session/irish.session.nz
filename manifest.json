@@ -1,5 +1,4 @@
 {
-  "background_color": "#FFFFFF",
   "description": "Irish trad tune archive",
   "dir": "ltr",
   "display": "standalone",
@@ -10,6 +9,7 @@
   "id": "/",
   "start_url": "/",
   "theme_color": "#F7C501",
+  "background_color": "#FFFFFF",
   "icons": [
     {
       "src": "/favicon.ico",
