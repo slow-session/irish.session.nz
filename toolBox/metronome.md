@@ -55,6 +55,7 @@ function setup() {
     source.loopEnd = 1 / (getTempo() / 60);
     source.connect(ac.destination);
     source.start(0);
+    ac.suspend();
 }
 
 var input = document.createElement("input");
