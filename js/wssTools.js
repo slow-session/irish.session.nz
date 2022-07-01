@@ -51,23 +51,6 @@ const wssTools = (function () {
         return str;
     }
 
-    function getCheckedCheckboxesFor(checkboxName) {
-        let checkboxes = document.querySelectorAll(
-            'input[name="' + checkboxName + '"]:checked'
-        );
-        let values = [];
-        Array.prototype.forEach.call(checkboxes, function (el) {
-            values.push(el.value);
-        });
-        return values;
-    }
-
-    function toTitleCase(str) {
-        return str.replace(/\w\S*/g, function (txt) {
-            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-        });
-    }
-
     function show_iframe(url) {
         // Add other sources as needed
         if (url.startsWith("https://www.youtube.com/")) {
@@ -323,18 +306,23 @@ const wssTools = (function () {
         });
     }
 
+
     const getRandomInt = (min, max) => {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1)) + min;
     };
 
+    function toTitleCase(str) {
+        return str.replace(/\w\S*/g, function (txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+        });
+    }
+
     return {
         downloadABCFile: downloadABCFile,
         downloadFile: downloadFile,
         slugify: slugify,
-        getCheckedCheckboxesFor: getCheckedCheckboxesFor,
-        toTitleCase: toTitleCase,
         show_iframe: show_iframe,
         enterSearch: enterSearch,
         getRandomInt: getRandomInt,
