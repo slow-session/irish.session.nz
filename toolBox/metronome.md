@@ -1,38 +1,64 @@
 ---
-layout: page
+layout: page-js
 title: Metronome
 permalink: /metronome/
 ---
 
 
-<div class="setParentOuter" >
-    <div id="bpm"></div>
+<div class="audioParentOuter">
     <div id="startStop"></div>
+    <div class="audioParentInner">
+        <div class="audioChildInner">
+            <div id="bpmSlider"></div>
+        </div>
+    </div>
 </div>
 
-Set BPM from 30 to 180
-
 <script>
+// Code from https://github.com/padenot/metro/blob/master/metro.js.md
 
-//Code from https://github.com/padenot/metro/blob/master/metro.js.md
+let minBPM = 30;
+let maxBPM = 200;
+let initialBPM = 130;
 
 function clamp(v, min, max) {
     return Math.min(max, Math.max(min, v));
 }
 
-function clampTempo(t) {
-    return clamp(t, 30, 300);
+function clampTempo(value) {
+    return clamp(parseFloat(value), minBPM, maxBPM);
 }
 
-function getTempo() {
-    return clampTempo(parseFloat($("input").value));
+function createSlider() {
+    let bpmSlider = document.getElementById("bpmSlider");
+
+    // create the speed slider
+    noUiSlider.create(bpmSlider, {
+        start: [initialBPM],
+        tooltips: [
+            wNumb({
+                decimals: 0,
+                postfix: " bpm",
+            }),
+        ],
+        range: {
+            min: minBPM,
+            max: maxBPM,
+        },
+    });
+
+    // add the function that this slider calls on change
+    bpmSlider.noUiSlider.on("update", function(value) {
+        source.loopEnd = 1 / (clampTempo(value) / 60);
+    });
+  
 }
 
 $ = document.querySelector.bind(document);
 
 var ac = new AudioContext();
 
-function setup() {
+function setupMetronome() {
     var buf = ac.createBuffer(1, ac.sampleRate * 2, ac.sampleRate);
     var channel = buf.getChannelData(0);
     var phase = 0;
@@ -52,37 +78,23 @@ function setup() {
     source = ac.createBufferSource();
     source.buffer = buf;
     source.loop = true;
-    source.loopEnd = 1 / (getTempo() / 60);
+    source.loopEnd = 1 / (clampTempo(initialBPM) / 60);
     source.connect(ac.destination);
     source.start(0);
     ac.suspend();
-}
 
-var input = document.createElement("input");
-input.type = "number";
-input.min = 30;
-input.max = 180;
-input.step = 1;
-input.value = 130;
-input.autofocus = true;
+    createSlider();
+}
 
 var button = document.createElement("button");
 button.classList.add("playButton");
 button.classList.add("playIcon");
 
+document.addEventListener("DOMContentLoaded", function (event) {
 
-window.onload = function() {
-    //document.body.appendChild(input);
-    //document.body.appendChild(button);
-    
+    setupMetronome();
+
     document.getElementById("startStop").appendChild(button);
-    document.getElementById("bpm").appendChild(input);
-
-    for (e of [input, button]) {
-        /* CSS-in-js is trendy */
-        e.style = "font-size: 2em; display: block; margin: 1em auto;";
-    }
-
     button.onclick = function() {
         if (ac.state == "running") {
             ac.suspend();
@@ -95,15 +107,5 @@ window.onload = function() {
         }
     }
 
-    input.onchange = function() {
-        setTimeout(function() {
-            input.value = getTempo();
-        }, 0);
-    }
-    input.oninput = function() {
-        source.loopEnd = 1 / (getTempo() / 60);
-    }
-
-    setup();
-}
+});
 </script>

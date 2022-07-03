@@ -16,6 +16,10 @@ video formats and play parts of them in a loop.
 If you have ABC files on your own computer you can use the
 [Play Local ABC](/playLocalABC/) page to play them in a loop.
 
+[Metronome](/metronome/)
+-------
+Simple metronome - no bells, no whistles! Supports 30 - 200 bpm.
+
 [The Long Bow](/longbow/)
 -------
 In his fiddle class at Ceol Aneas 2018, Rob Zielinski suggested practicing
