@@ -8,7 +8,7 @@ permalink: /metronome/
 <div class="audioParentOuter">
     <div id="startStop"></div>
     <div class="audioParentInner">
-        <div class="audioChildInner">
+        <div class="metroChildInner">
             <div id="bpmSlider"></div>
         </div>
     </div>
