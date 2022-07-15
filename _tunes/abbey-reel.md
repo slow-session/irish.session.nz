@@ -13,7 +13,7 @@ parts: AABB
 mp3_source: Fergal Scahill
 mp3_licence: © Fergal Scahill. All Rights Reserved.
 mp3_url: https://www.youtube.com/watch?v=FzvUio08Zx4
-alt_mp3_url:
+alt_mp3_url: https://www.youtube.com/watch?v=b-aJebOQMEw
 abc_source: The Session
 abc_url: https://thesession.org/tunes/477
 abc: |
