@@ -16,16 +16,6 @@ video formats and play parts of them in a loop.
 If you have ABC files on your own computer you can use the
 [Play Local ABC](/playLocalABC/) page to play them in a loop.
 
-[Metronome](/metronome/)
--------
-Simple metronome - no bells, no whistles! Supports 30 - 200 bpm.
-
-[The Long Bow](/longbow/)
--------
-In his fiddle class at Ceol Aneas 2018, Rob Zielinski suggested practicing
-long slow down and up bows every day for 3 months. You can use [The Long Bow](/longbow/)
-to help with the timing.
-
 [editABC](/editABC/)
 -------
 If you have some ABC you want to edit you can use the [editABC](/editABC/) page.
@@ -36,7 +26,16 @@ on the various *session.nz* webpages
 
 [addBlackboardABC](/addBlackboardABC/)
 -------
-If you'd like add the "blackboard ABC" (or is it really "whiteboard ABC" these days) to your ABC notation, this tool may help. You may have to hand tweak the output in some cases.
+If you'd like add the "blackboard ABC" (or is it really "whiteboard ABC" these days?) to your ABC notation, this tool may help. You may have to hand tweak the output in some cases.
+
+Other Tools
+---------
+
+- <input class="filterButton" type="button" onclick="window.location.href='/metronome/';" value="Metronome" /> - simple metronome - no bells, no whistles! Supports 30 - 200 bpm.
+
+- <input class="filterButton" type="button" onclick="window.location.href='/longbow/';" value="The Long Bow" /> - in his fiddle class at Ceol Aneas 2018, Rob Zielinski suggested practicing long slow down and up bows every day for 3 months. Use this tool to help with the timing.
+
+- <input class="filterButton" type="button" onclick="window.location.href='/tradle/';" value="Tradle" /> - test your tune knowledge - "hat tip" to Wordle and its various spinoffs. 
 
 [Create MD File](/createMD/)
 --------

@@ -26,14 +26,13 @@ window.store = {
 };
 </script>
 
+ - <input class="filterButton" type="button" onclick="window.location.href='/latest/';" value="Latest Tunes" /> - see the tunes we've added most recently
+{% include jukebox.html %}
+
 <p>
 Play a tune now using the <strong>Play Now</strong> button or use the
 link to the Tune Page for a more traditional view. 
 </p>
-
- - <input class="filterButton" type="button" onclick="window.location.href='/latest/';" value="Latest Tunes" /> - see the tunes we've added most recently
-{% include jukebox.html %}
-{% include tradle.html %}
 
 {% include tunes-search.html tuneBook="tunesarchive" searchTerms="Titles, Rhythms, Musicians" %}
 
