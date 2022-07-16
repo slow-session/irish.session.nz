@@ -13,7 +13,7 @@ parts: AABB
 mp3_source: Mick O'Connor, Eugene Teevan, Mick Bailey
 mp3_licence: © Mick O'Connor, Eugene Teevan, Mick Bailey. All rights reserved.
 mp3_url: 
-alt_mp3_url: 
+alt_mp3_url: https://www.youtube.com/watch?v=y1WBk-_nhok&t=121s
 abc_source: The Session
 abc_url: https://thesession.org/tunes/2281
 abc: |
